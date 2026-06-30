@@ -1,0 +1,41 @@
+site_name: QutritLab Documentation
+site_description: Qutrit quantum circuit simulator
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            show_category_heading: true
+            docstring_style: google
+
+nav:
+  - Home: index.md
+  - Getting Started: started.md
+  - API Reference: 
+    - Gates:
+      - Single-Qutrit Gates: single_gates.md
+      - Multi-Qutrit Gates: multi_gates.md
+      - Custom Gate: custom.md
+    - Circuit: circuit.md
+    - Simulation: simulation.md
+  
+  - Community: community.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
